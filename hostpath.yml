@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: containerd-deamonset
+  labels:
+    app: containerd-deamonset
+spec:
+  selector:
+    matchLabels:
+      app: containerd-deamonset
+  template:
+    metadata:
+      labels:
+        app: containerd-deamonset
+    spec:
+      containers:
+      - name: troubleshooting
+        image: rajpractise/troubleshootingtools:v1 
+        volumeMounts:
+          - name: containerdsock
+            mountPath: "/run/containerd/containerd.sock"
+      volumes:
+        - name: containerdsock
+          hostPath:
+            path: /run/containerd/containerd.sock
