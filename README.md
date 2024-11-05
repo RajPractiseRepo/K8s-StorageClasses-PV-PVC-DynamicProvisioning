@@ -23,6 +23,18 @@ This repository provides examples and explanations of different Kubernetes stora
 6.	**Storage Classes (SC)**: Storage Classes define the types of storage available in the cluster and how they are provisioned. They enable dynamic provisioning of PVs based on predefined templates or policies.
 
 
+###########################################################################################################
+
+# Architecture flow Diagram:
+
+
+![architecture](https://github.com/user-attachments/assets/49a4340e-5507-426d-bc2d-74544b271dbd)
+
+
+
+
+
+
 # Lets see the Practicals of all one by one:
 
 # 1. EmptyDir:
